@@ -1,8 +1,12 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
+
+// Dynamically import Lottie and Snowfall with SSR disabled
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+const Snowfall = dynamic(() => import("react-snowfall"), { ssr: false });
+
 import animationData from "../public/christmas-animation.json"; // Add a Lottie JSON file for animation
-import { Snowfall } from "react-snowfall"; // For the optional snowfall effect
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState<Record<string, number>>({});
