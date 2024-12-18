@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "./Footer";
 
 // Load Google Fonts with variables
 const geistSans = Geist({
@@ -37,16 +38,10 @@ export default function RootLayout({
             </h1>
           </div>
         </header>
-
+        <Footer />
         <main className="flex-grow container mx-auto px-4 py-8">
           {children}
         </main>
-
-        <footer className="bg-green-700 text-white py-4">
-          <div className="text-center">
-            Made with ❤️ for Christmas © {new Date().getFullYear()}
-          </div>
-        </footer>
       </body>
     </html>
   );

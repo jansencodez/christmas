@@ -63,7 +63,7 @@ export default function Home() {
         </p>
 
         <div className="mt-6">
-          <audio controls muted={false} ref={audioRef} autoPlay>
+          <audio controls ref={audioRef} muted={false}>
             <source
               src="/Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars.mp3"
               type="audio/mp3"
