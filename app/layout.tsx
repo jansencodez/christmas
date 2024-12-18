@@ -38,10 +38,11 @@ export default function RootLayout({
             </h1>
           </div>
         </header>
-        <Footer />
+
         <main className="flex-grow container mx-auto px-4 py-8">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
